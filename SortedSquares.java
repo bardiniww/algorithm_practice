@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class SortedSquares {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(sortedSquares(new int[]{-39, -7, -2, 0, 1, 10, 13})));
+        System.out.println(Arrays.toString(sortedSquares(new int[]{-7,-3,2,3,11})));
     }
 
     public static int[] sortedSquares(int[] nums) {
@@ -12,9 +12,9 @@ public class SortedSquares {
         int left = 0;
         int right = size -1;
 
-        for (int i = size - 1; i != 0; i--) {
+        for (int i = size - 1; i >= 0; i--) {
             int item;
-            if (Math.abs(nums[right]) > Math.abs(nums[left])) {
+            if (Math.abs(nums[right]) >= Math.abs(nums[left])) {
                 item = nums[right];
                 right--;
             }
